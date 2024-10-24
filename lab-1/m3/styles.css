@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.1rem;
+}
+
+.register-btn {
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    padding: 50px 20px;
+    display: grid;
+    height: 40rem;
+    overflow: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 20px;
+}
+.blur-wrapper {
+    overflow: hidden;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    display: flex;
+}
+.hero-right {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://invest-if.com/assets/entry/000/000/044/1622201777_8190dbc1ce216c967159_large.jpg");
+}
+.hero-right img {
+    height: 10rem;
+    width: 20rem;
+}
+.hero-left {
+    display: flex;
+    justify-content: center;
+}
+.hero-content {
+    width: 60%;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 850px) {
+    .hero h1 {
+        font-size: 2rem !important;
+    }
+    .hero {
+        display: flex !important;
+    }
+    .hero-left {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(153, 145, 145, 0.096);
+        backdrop-filter: blur(1.2rem);
+    }
+    .blur-wrapper {
+        position: absolute !important;
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: 100%;
+        z-index: -1;
+    }
+}
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+}
+
+main {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.feature-item {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 0.5rem;
+    border: 1px solid #ccc;
+    width: 30rem;
+    text-align: center;
+}
+.feature-item div {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.steps {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 1rem;
+}
+.grid-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 550px) {
+    .steps-grid {
+        grid-template-columns: repeat(1, 1fr) !important;
+        display: flex;
+        justify-content: center;
+    }
+    .step {
+        width: 100%;
+    }
+}
+@media (max-width: 1000px) {
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .step {
+        width: 15rem;
+    }
+}
+
+.step {
+    background-color: #eaeaea;
+    padding: 1rem;
+    margin: 0.5rem;
+    width: 20rem;
+    height: 10rem;
+}
+
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+}
+
+.footer-links li {
+    margin-left: 20px;
+}
+
+@media (max-width: 1200px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        width: 80%;
+    }
+
+    .steps-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step {
+        width: 80%;
+    }
+}
